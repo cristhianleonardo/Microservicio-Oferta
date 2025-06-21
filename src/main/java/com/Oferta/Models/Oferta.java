@@ -1,7 +1,5 @@
-package com.irojas.demojwt.Oferta;
+package com.Oferta.Models;
 
-import com.irojas.demojwt.User.User;
-import com.irojas.demojwt.Subasta.Subasta;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,14 +17,12 @@ public class Oferta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @Column(name = "usuario_id",nullable = false)
+    private Long user;
 
-    @ManyToOne
-    @JoinColumn(name = "subasta_id", nullable = false)
-    private Subasta subasta;
-
+    @Column(nullable = false)
+    private Long subasta;
+    
     @Column(nullable = false)
     private Double monto;
 

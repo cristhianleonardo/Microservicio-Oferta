@@ -1,0 +1,120 @@
+{
+  "info": {
+    "name": "OfertaController API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "8ab23942-489e-43e7-9f39-29e3acccf073"
+  },
+  "item": [
+    {
+      "name": "Obtener oferta por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/api/ofertas/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8082",
+          "path": ["api", "ofertas", "1"]
+        }
+      }
+    },
+    {
+      "name": "Obtener ofertas por usuario",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "user-id",
+            "value": "123",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/ofertas/usuario",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8082",
+          "path": ["api", "ofertas", "usuario"]
+        }
+      }
+    },
+    {
+      "name": "Obtener ofertas por subasta",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/api/ofertas/subasta/10",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8082",
+          "path": ["api", "ofertas", "subasta", "10"]
+        }
+      }
+    },
+    {
+      "name": "Obtener mejor oferta por subasta",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/api/ofertas/subasta/mejor/10",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8082",
+          "path": ["api", "ofertas", "subasta", "mejor", "10"]
+        }
+      }
+    },
+    {
+      "name": "Crear oferta",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "user-id",
+            "value": "123",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"subastaId\": 10,\n  \"monto\": 500.0\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/ofertas/crear",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8082",
+          "path": ["api", "ofertas", "crear"]
+        }
+      }
+    },
+    {
+      "name": "Cancelar oferta",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "user-id",
+            "value": "123",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/ofertas/cancelar/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8082",
+          "path": ["api", "ofertas", "cancelar", "1"]
+        }
+      }
+    }
+  ]
+}

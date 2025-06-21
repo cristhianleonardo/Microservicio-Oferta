@@ -1,12 +1,10 @@
-package com.irojas.demojwt.Oferta;
+package com.Oferta.Models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.irojas.demojwt.User.User;
-import java.util.Date;
-import java.util.List;
+//import com.irojas.demojwt.User.User;
 
 @Data
 @Builder
