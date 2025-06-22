@@ -11,7 +11,7 @@ import org.springframework.http.HttpStatus;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/ofertas")
+@RequestMapping("/ofertas")
 @CrossOrigin(origins = {"http://localhost:5173"})
 @RequiredArgsConstructor
 public class OfertaController {
